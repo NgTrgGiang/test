@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Quần Áo TG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar collapsed" id="sidebar">
+    <ul>
+      <li><span>🏠</span><span class="text">Trang chủ</span></li>
+      <li><span>👕</span><span class="text">Sản phẩm</span></li>
+      <li><span>🛒</span><span class="text">Giỏ hàng</span></li>
+      <li><span>📞</span><span class="text">Liên hệ</span></li>
+    </ul>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="left">
+      <button id="toggleBtn">☰</button>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="logo" alt="Logo TG">
+    </div>
+
+    <div class="center">
+      <form action="#" class="search-form">
+        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        <button type="submit">🔍</button>
+      </form>
+      <button class="mic-btn">🎤</button>
+    </div>
+
+    <div class="right">
+      <img src="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg" class="avatar" alt="Tài khoản">
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250" alt="Áo thun trắng">
+        <h3>Áo thun trắng basic</h3>
+        <p>Giá: 120.000đ</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250" alt="Quần jeans">
+        <h3>Quần jeans đen slim fit</h3>
+        <p>Giá: 250.000đ</p>
+      </div>
+      <!-- Thêm sản phẩm khác nếu muốn -->
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const sidebar = document.getElementById('sidebar');
+    toggleBtn.onclick = () => sidebar.classList.toggle('collapsed');
+  </script>
+
+</body>
+</html>

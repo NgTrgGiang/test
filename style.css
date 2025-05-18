@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 56px);
+  background-color: #212121;
+  transition: width 0.3s;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #383838;
+}
+
+.sidebar .text {
+  margin-left: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 100%;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+  z-index: 101;
+}
+
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 24px;
+}
+
+.search-form {
+  display: flex;
+  height: 36px;
+  background-color: #121212;
+  border: 1px solid #303030;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.search-form input {
+  background: transparent;
+  border: none;
+  padding: 0 10px;
+  color: white;
+  width: 400px;
+}
+
+.search-form button {
+  background: #303030;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.mic-btn {
+  background: #303030;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* MAIN */
+.main {
+  margin-left: 240px;
+  padding: 70px 20px 20px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.collapsed ~ .main {
+  margin-left: 72px;
+}
+
+/* SẢN PHẨM */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 4px;
+}
